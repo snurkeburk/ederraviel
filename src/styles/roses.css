@@ -1,0 +1,113 @@
+@keyframes fall{
+    from {
+        top: -20%;
+        transform: translateX(-10vw) rotate(-45deg);
+    }
+    to {
+        top: 100%;
+        transform: translateX(10vw) rotate(45deg);
+    }
+}
+@-webkit-keyframes rotatingR /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotatingR {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+    to {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+    to {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+  }
+.rose-big {
+    width: auto;
+    height: 1rem;
+    z-index: 5;
+    filter: brightness(120%);
+    position: absolute;
+    left: 50%;
+    top: 0rem;
+   /* animation: bigfall forwards 5s 1s ;*/
+}
+
+.rose-small {
+    width: auto;
+    height: 4rem;
+    z-index: 5;
+    filter: brightness(120%);
+    top: 0rem;
+ 
+}
+.rose-small.one {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+}
+.rose-small.two {
+    -webkit-animation: rotatingR 2s linear infinite;
+    -moz-animation: rotatingR 2s linear infinite;
+    -ms-animation: rotatingR 2s linear infinite;
+    -o-animation: rotatingR 2s linear infinite;
+    animation: rotatingR 2s linear infinite;
+}
+.rose-container {
+    width: 100%;
+    backdrop-filter: blur(2px);
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.rose {
+    color: blue;
+    position: absolute;
+    animation: fall forwards 5s ease-in-out; ;
+}

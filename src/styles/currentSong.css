@@ -1,0 +1,39 @@
+.current-song-container {
+    width: 100%;
+}
+.current-song-smaller-container {
+    position: relative;
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+}
+
+.current-banger {
+    font-weight: 100;
+    font-size: 2.5rem;
+}
+#block {
+    width: 100%;
+}
+#block p {
+    font-size: 1em;
+    font-weight: 100;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+#block p:last-child{
+    font-size: 0.8em;
+}
+.currentSong{
+    display: block;
+    position: absolute;
+    overflow-y: scroll;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 380px;
+    z-index: 1;
+}

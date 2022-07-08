@@ -1,0 +1,104 @@
+.social-container {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: rgb(255, 255, 255);
+    width: 3rem;
+    height: auto;
+}
+
+#spotify, #discord, #instagram, #steam {
+    display: flex;
+    border-style: solid;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    z-index: 5 !important;
+}
+
+.social-container #spotify:hover{
+    color: var(--spotify-color);
+    cursor: pointer;
+}
+.social-container #discord:hover{
+    background-color: var(--discord-color);
+    cursor: pointer;
+    color: white;
+}
+.social-container #steam:hover{
+    cursor: pointer;
+    color: var(--steam-color);
+}
+
+.social-container #instagram:hover{
+    cursor: pointer;
+    color: var(--instagram-color);
+}
+.social-item {
+    position: relative;
+}
+.social-description {
+    background-color: var(--dark-color);
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    color: black;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.2 0.5rem;
+    border-radius: 3rem;
+}
+.social-description:hover {
+    cursor: pointer;
+}
+.social-description p {
+    font-family: var(--standard-font);
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+
+#spotify-expanded {
+    border-color: var(--spotify-color);
+    color:white;
+}
+#discord-expanded {
+    border-color: var(--discord-color);
+    color: white;
+}
+#steam-expanded {
+    border-color: var(--steam-color);
+    color: white;
+}
+#instagram-expanded {
+    border-color: var(--instagram-color);
+    color: white;
+}
+#spotify-expanded, #discord-expanded, #instagram-expanded, #steam-expanded {
+    border-style: solid;
+    border-radius: 50%;
+    position: absolute;
+    font-size: 3rem;
+    left: 0;
+}
+
+
+@media screen and (max-width: 600px) {
+   
+    .social-description {
+       justify-content: flex-start;
+    }
+
+    .social-container a {
+        color: white;
+        font-size: 0.6em;
+        padding-right: 1rem;
+    }
+  
+    
+}

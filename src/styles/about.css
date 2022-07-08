@@ -1,0 +1,29 @@
+.about-container {
+  background-color: var(--dark-color);
+  height: 300px;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+
+}
+.about-top {
+    background-color: rgb(36, 36, 36);
+  border-top-right-radius: 1.5rem;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+}
+.about-top h4 {
+  font-size: 3rem;
+  font-weight: 100;
+  font-family: var(--pretty-font);
+}
+.about-container p {
+    padding: 0.5rem 0.7em;
+    text-align: left;
+    font-size: 1.1rem;
+    font-family: var(--standard-font);
+}
