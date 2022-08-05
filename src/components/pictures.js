@@ -38,7 +38,7 @@ const Pictures = (props) => {
           setRotation(20);
           setX(100);
         } else {
-          setX(105);
+          setX("25vw");
         }
         break;
       case 3:
@@ -46,7 +46,7 @@ const Pictures = (props) => {
           setRotation(30);
           setX(125);
         } else {
-          setX(140);
+          setX("30vw");
         }
         break;
       case 4:
@@ -62,7 +62,7 @@ const Pictures = (props) => {
           setRotation(-20);
           setX(-100);
         } else {
-          setX(-105);
+          setX("-25vw");
         }
 
         break;
@@ -71,7 +71,7 @@ const Pictures = (props) => {
           setRotation(-30);
           setX(-125);
         } else {
-          setX(-140);
+          setX("-30vw");
         }
         break;
     }
@@ -81,7 +81,8 @@ const Pictures = (props) => {
     return (
       <div>
         <motion.div className="picture-container">
-          <motion.img
+          <motion.div
+            className="picture-card"
             initial={{ rotate: 0, x: 0, y: 75 }}
             animate={
               props.number == 1
@@ -126,12 +127,11 @@ const Pictures = (props) => {
                   }
                 : {}
             }
-            transition={{ type: "tween" }}
+            transition={{ type: "tween", ease: "easeInOut" }}
             onClick={() => setCardClicked(!cardClicked)}
-            src={props.image}
-            alt="picture"
-            className="picture"
-          />
+          >
+            <motion.img src={props.image} alt="picture" className="picture" />
+          </motion.div>
         </motion.div>
 
         <AnimatePresence>
@@ -179,7 +179,8 @@ const Pictures = (props) => {
     return (
       <div>
         <motion.div className="picture-container">
-          <motion.img
+          <motion.div
+            className="picture-card"
             initial={{ rotate: 0, x: 0, y: 75 }}
             animate={
               props.number == 4
@@ -224,12 +225,11 @@ const Pictures = (props) => {
                   }
                 : {}
             }
-            transition={{ type: "tween" }}
+            transition={{ type: "tween", ease: "easeInOut" }}
             onClick={() => setCardClicked(!cardClicked)}
-            src={props.image}
-            alt="picture"
-            className="picture"
-          />
+          >
+            <motion.img src={props.image} alt="picture" className="picture" />
+          </motion.div>
         </motion.div>
 
         <AnimatePresence>

@@ -10,13 +10,14 @@
     align-items: center;
 }
 .react-audio-player {
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     border: 1px solid var(--dark-color);
+    background-color: white;
     overflow-x: hidden;
     height: 10rem;
     width: 100%;
     z-index: 2;
-    margin-top: -5rem;
+    margin-top: -5.5rem;
 }
 .song-image {
     z-index: 3;
@@ -54,10 +55,14 @@
     .song {
         display: flex;
         flex-direction: column;
-        width: 14rem !important;
+        width: 10rem !important;
         position: relative;
         justify-content: center;
         align-items: center;
     }
+.song-image {
+    width: 10rem;
+    height: auto;
+}
     
 }

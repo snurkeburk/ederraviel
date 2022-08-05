@@ -15,16 +15,37 @@ import about from "./images/about.png";
 import beer from "./images/beer.jpg";
 import train from "./images/train.jpg";
 import leaves from "./images/leaves.png";
+import jasper from "./images/jasper.png";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Intro from "./components/intro";
+import platform from "platform";
+
+import wingview from "./images/wingview.jpg";
+import movies from "./images/movies.jpg";
+import skagen from "./images/skagen.jpg";
+import teasnur from "./images/teasnur.jpg";
+import snurderra from "./images/snurderra.jpg";
+
 function App() {
   const [hover, setHover] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
+      <Intro />
+      <motion.header
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={
+          platform.name == "Chrome"
+            ? { duration: 0.5, delay: 3.2 }
+            : { duration: 0.5, delay: 2.8 }
+        }
+        className="App-header"
+      >
         <Roses />
-
         <div id="bg-blur"></div>
+
         <Name name="Ederraviel" />
         <motion.div
           whileHover={{ x: 0 }}
@@ -33,37 +54,35 @@ function App() {
           className="pic-section"
         >
           <Pictures
-            name={"Onigiris"}
-            description={
-              "Onigiris is a Japanese anime series that debuted in 2017."
-            }
-            date={"2022-07-07"}
+            name={"Toast Skagen!"}
+            description={"Made with love by Snur <3"}
+            date={"2022-07-24"}
             number={3}
-            image={food}
+            image={skagen}
             hover={hover}
           />
           <Pictures
-            name={"Airplaneee!"}
-            description={"A plane that flies"}
-            date={"2022-06-22"}
+            name={"Bubble tea!!"}
+            description={"Bubble tea with Snur :)"}
+            date={"2022-07-24"}
             number={2}
-            image={plane}
+            image={teasnur}
             hover={hover}
           />
           <Pictures
-            name={"Bubble tea :)"}
-            description={"Bobel tea wif Kev."}
-            date={"2022-07-04"}
+            name={"Fuck Eurowings"}
+            description={"Goin back home"}
+            date={"2022-07-25"}
             number={1}
-            image={tea}
+            image={wingview}
             hover={hover}
           />
           <Pictures
-            name={"Annisokay :D"}
-            description={"Beer is good!"}
-            date={"2022-05-27"}
+            name={"Filmstaden Scandinavia"}
+            description={"Mmmmmm"}
+            date={"2022-07"}
             number={6}
-            image={beer}
+            image={movies}
             hover={hover}
           />
           <Pictures
@@ -75,11 +94,11 @@ function App() {
             hover={hover}
           />
           <Pictures
-            name={"About me :)"}
+            name={"Snurderra <3"}
             description={""}
             date={""}
             number={4}
-            image={about}
+            image={snurderra}
             hover={hover}
           />
         </motion.div>
@@ -99,7 +118,7 @@ function App() {
           <Social icon="steam" />
           <Social icon="instagram" />
         </div>
-      </header>
+      </motion.header>
     </div>
   );
 }

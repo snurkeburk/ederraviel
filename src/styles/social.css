@@ -55,7 +55,8 @@
 .social-description:hover {
     cursor: pointer;
 }
-.social-description p {
+.social-description a, .social-description p {
+    text-decoration: none;
     font-family: var(--standard-font);
     color: white;
     font-weight: bold;
@@ -89,16 +90,36 @@
 
 
 @media screen and (max-width: 600px) {
-   
+    .social-container {
+        font-size: 2rem;
+        width: 2rem;
+    }
     .social-description {
        justify-content: flex-start;
     }
-
     .social-container a {
         color: white;
         font-size: 0.6em;
         padding-right: 1rem;
     }
-  
-    
+    #spotify-expanded, #discord-expanded, #instagram-expanded, #steam-expanded {
+        font-size: 2rem;
+        z-index: 2;
+    }
+    .social-description.discord{
+        border-radius: 1.2rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .social-description.discord p{
+        font-size: 1.2rem;
+        font-weight: 100;
+        background-color: var(--discord-color);
+        border-radius: 0.5rem;
+        padding-left: 1rem;
+        
+    }
+
 }

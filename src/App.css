@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=My+Soul&display=swap');
 *{
   margin: 0;
   padding: 0;
-
+  
 }
 
+
 :root {
+  --name-font: 'My Soul', cursive;
   --background-color: #222121;
   --text-color: #fff;
   --dark-color: #101010;
@@ -25,12 +28,7 @@
 
 }
 
-
-
-
-
 .App-header {
-
   background-color: var(--background-color);
   min-height: 100vh;
   display: flex;
@@ -51,8 +49,19 @@
   width: 100%;
   z-index: 1;
   background-color:rgba(0, 0, 0, 0.664);
-  
+
 }
+#bg-intro {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -69,7 +78,6 @@
 .mid-section div {
   width: 12em;
 }
-
 .right-section {
   position: absolute;
   top: 50%;
@@ -85,6 +93,49 @@
   padding-right: 1rem;
 }
 
+.line {
+  background-color: white;
+  width: 250px;
+  height: 5px;
+  margin: 0;
+  padding: 0;
+  z-index: 1001;
+  border-radius: 50rem;
+  position: absolute;
+}
+.line-long, .line-mid, .line-short {
+  border-radius: 100rem;
+}
+.line-long {
+  background-color: white;
+  width: 250px;
+  height: 5px;
+  transform: rotate(45deg);
+}
+.line-mid {
+  background-color: white;
+  width: 5px;
+  height: 80px;
+}
+.line-short {
+  background-color: white;
+  width: 5px;
+  height:52px;
+
+}
+.logo-right {
+  transform: rotate(90deg);
+  transform: scaleX(-1);  
+  position: absolute;
+  left: calc(50% + 12.5rem);
+}
+.logo-left {
+  position: absolute;
+  left: calc(50% - 12.5rem);
+}
+.line-long.mid {
+  width: 220px;
+}
 @media screen and (max-width: 600px) {
   .right-section {
     position: absolute;
@@ -96,6 +147,15 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-evenly;
+  padding-right: 0rem;
+  }
+
+  .mid-section {
+    margin-top: 1rem;
+  }
+
+  .mid-section h1 {
+    width: 100vw;
   }
   
 }
